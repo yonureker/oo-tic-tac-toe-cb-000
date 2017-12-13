@@ -37,7 +37,7 @@ class TicTacToe
 
   def position_taken?
   !(@board[index].nil? || @board[index] == " ")
-end
+  end
 
   def turn_count
     @board.count{|token| token == "X" || token == "O"}
