@@ -35,7 +35,7 @@ class TicTacToe
     turn_count % 2 == 0 ? "X" : "O"
   end
 
-  def position_taken?(board, index)
+  def position_taken?
   !(@board[index].nil? || @board[index] == " ")
 end
 
@@ -67,4 +67,12 @@ end
     i == "X" || i == "O"
   end
 end
+
+  def draw?
+    if full? && won? == false
+      return true
+    else
+      return false
+    end
+  end
 end
